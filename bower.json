@@ -1,0 +1,22 @@
+{
+  "name": "andrews_port",
+  "description": "resumes site",
+  "main": "main.js",
+  "authors": [
+    "aespidol <aespidol@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "skeleton": "^2.0.4",
+    "animate.css": "^3.5.2"
+  }
+}
