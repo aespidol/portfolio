@@ -1,0 +1,31 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: url("./images/texture.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+a {
+  color: #fff;
+}
+.js-spiral {
+  position: fixed;
+}
+.js-section {
+  position: absolute;
+  left: -100%;
+  box-sizing: border-box;
+  transition: .2s border ease-out;
+  border: 2px solid #113232;
+  padding: calc(61.80339vw * .6180339 * .6180339 * .6180339 * .6180339 * .6180339);
+}
+.js-section:hover {
+  border-radius: 5%;
+  border: 10px solid #113232;
+}
+.message {
+  position: absolute;
+  width: 50%;
+  left: 5vh;
+  bottom: 10vh;
+}
