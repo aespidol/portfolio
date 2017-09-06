@@ -2,17 +2,18 @@ html
 	head
 	title Andrew Espidol
 	meta(name='viewport', content='width=device-width, initial-scale=1')
-	link(rel='stylesheet', href='./client/css/main.min.css')
 	link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
 	link(rel='stylesheet', href='./bower_components/skeleton/css/normalize.css')
 	link(rel='stylesheet', href='./bower_components/skeleton/css/skeleton.css')
 	link(rel='stylesheet', href='./bower_components/animate.css/animate.min.css')
+	link(rel='stylesheet', href='./client/css/main.min.css')
 	script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
 	script(src='./bower_components/wow/dist/wow.min.js')
 	script(src='./client/main.js')
 	body
 		//- mixins
 		include ./mixins/shapes
+		include ./mixins/squiggle
 		nav#nav
 			.nav-logo
 				img.img-responsive(src="./images/logo.png")
@@ -20,11 +21,11 @@ html
 			.card.float
 				#content
 					h2 Andrew Espidol
-					p Front End Developer
+					p Front End Web Developer
 					#para
 						#highlight
 						#about
-							p.white-text An passionate developer who enjoys creating unique interactions. 
+							p.white-text I just want to highlight that I enjoy developing unique interactions.
 
 			each val in [3,20,32,70,89]
 				+circle(val)
@@ -32,4 +33,88 @@ html
 				+triangle(val)
 			each val in [-2, 15, 50, 92]
 				+square(val)
-		//- section#toolbox
+			#scroller.continue.white-text.animated.fadeIn
+				i.fa.fa-long-arrow-left(aria-hidden="true")
+				| &nbsp Scroll
+
+		section#work
+			.container
+				+squiggle("rgba(26, 188, 156,0.75)")
+				h1.text-center.strong
+					| Work
+					br
+					| And Play.
+				hr
+				.flex
+					.row
+						.eight.columns
+							.work-cards.flipt
+								h3 Flipt
+								p Predictive Real Estate Marketing
+
+						.four.columns
+							.work-cards.radio
+								h3 King FM
+								p Local Washington Radio Station
+					.row
+						.four.columns
+							.work-cards.dojo
+								h3 Coding Dojo
+								p Web Development Bootcamp
+						.eight.columns
+							.work-cards.cosmos
+								h3 Team Launchable
+								p Augmented Reality and Engagement
+					.row
+						.eight.columns
+							.work-cards.battle
+								h3 Git Battle
+								p Fun React Project to Score Github Accounts
+		section#contact
+			#contactCard
+				.container
+					+squiggle("#222222")
+					h1 Contact
+					p Currently available for contract or full-time work, and would love to hear from you
+					hr
+					.row
+						.columns.six
+							ul
+								li
+									i.fa.fa-phone
+									| &nbsp 561-319-0727
+								li
+									i.fa.fa-envelope
+									| &nbsp aespidol@gmail.com
+								li
+									i.fa.fa-map-marker
+									| &nbsp Bellevue, WA
+								li 
+									a(href="https://www.linkedin.com/in/aespidol/")
+										i.fa.fa-2x.fa-linkedin-square <span class="colored-text">&nbsp/&nbsp</span>
+									a(href="https://www.facebook.com/aespidol")
+										i.fa.fa-2x.fa-facebook-official <span class="colored-text">&nbsp/&nbsp</span>
+									a(href="https://github.com/aespidol")
+										i.fa.fa-2x.fa-github-square <span class="colored-text">&nbsp/&nbsp</span>
+									a(href="https://twitter.com/ampersandrue")
+										i.fa.fa-2x.fa-twitter-square
+						.columns.six
+							form
+								.input
+									.label
+										label
+											i.fa.fa-user
+									input(type="text" placeholder="Your Name")
+								.input
+									.label
+										label
+											i.fa.fa-phone
+									input(type="tel" placeholder="###-###-####")
+								.input
+									.label
+										label
+											i.fa.fa-envelope
+									input(type="email" placeholder="example@email.com")
+								textarea(name="", cols="30", rows="10" placeholder="Your message...")
+								input.white-text.black-bg(type="submit" value="Submit")
+

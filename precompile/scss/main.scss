@@ -1,16 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Bitter');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
 
 *{
     // outline: 1px dotted red;
 }
 
 // Colors
-$turq: rgba(26, 188, 156,1.0);
+$turq: rgba(26, 188, 156,0.75);
 $greensea: rgba(22, 160, 133,1.0);
 $white: #ffffff;
 $silver: rgba(189, 195, 199,1.0);
 $sunflower: rgba(241, 196, 15,1.0);
 $wisteria: rgba(142, 68, 173,1.0);
+$clouds: rgba(236, 240, 241,1.0);
+$alizarin: rgba(231, 76, 60,1.0);
+
+body {
+    background: $white;
+}
 
 nav {
     padding: 10px 30px;
@@ -29,20 +36,24 @@ h1,h2,h3,h4,h5 {
 p {
     margin: 0px !important;
 }
-
+a{
+    text-decoration: none;
+    color: black;
+}
 section{
     margin: 0px 30px;
     padding: 40px;
-    min-height: 400px;
 }
 
 #intro {
     // min-height: 500px;
     // height: 100%;
+    min-height: 500px;
     background: $turq;
     overflow: hidden;
     position: relative;
     text-align: center;
+
     .shape-border {
         border: 5px solid $greensea;
     }
@@ -68,6 +79,23 @@ section{
         }
     }
 
+}
+.squiggle {
+    stroke: $turq;
+    stroke-width: 5px;
+}
+
+#contact {
+    padding: 20px;
+    background: url('/images/brick.jpg') no-repeat center center fixed;  
+    background-size: cover;    
+    #contactCard {
+        padding: 80px 0px;
+        background: rgba(255,255,255, 0.7);
+        ul {
+            list-style: none;
+        }
+    }
 }
 
 .card {
@@ -98,12 +126,11 @@ section{
 .squiggle {
     text-align: center;
     margin: 0 auto;
-    stroke: $turq;
     fill: none;
-    stroke-width: 3;
+    stroke-width: 5;
+    stroke-dashoffset: 2e-05;
     stroke-dasharray: none;
     position: static;
-
 }
 .float {
     box-shadow: 0px 37px 20px -20px rgba(0,0,0,0.2);
@@ -124,10 +151,20 @@ section{
     position: absolute;
     left: -4%;
     transition: opacity 0.5s, width 2s;
+    box-shadow: 1px 2px 3px rgba(0,0,0,.2);
+    
+}
+
+.black-bg {
+    background: #222222 !important;
+}
+
+.colored-text {
+    color: $turq;
 }
 
 .white-text {
-    color: white;
+    color: rgba(255,255,255, 0.9) !important;
 }
 .sidefill {
     animation: sideFill 2s ease 1;
@@ -139,6 +176,97 @@ section{
     margin: 4px 0px;
 }
 
+.continue {
+    transform: rotate(-90deg) translateX(10px);
+    transition: color 0.5s;
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    i {
+        margin-right: 4px;
+        animation: shake 6s infinite;
+    }
+}
+
+.work-cards {
+    padding: 20px;
+    background: $alizarin;
+    color: white;
+    cursor: pointer;
+    transition: transform ease 0.4s;
+    h3 {
+        font-family: 'Lobster', cursive;
+    }
+}
+
+.work-cards:hover {
+    transform: scale(1.1);
+}
+.flipt {
+    background: url('/images/retired_couple.jpg');
+    background-position: -40 -6;
+}
+.dojo {
+    background: url('/images/binary.jpg');
+    background-size: cover;
+}
+.battle {
+    background: url('/images/github.png');
+    background-size: cover;
+}
+.radio {
+    background: url('/images/radio.png');
+    background-size: cover;
+}
+
+.cosmos {
+    background: url('/images/cosmos.jpg');
+    background-size: cover;
+}
+
+.hide {
+    color: rgba(255,255,255, 0) !important;
+}
+
+.row {
+    margin: 30px 0px;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+form {
+    position: relative;
+    .input{
+        margin: 15px 0px;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+        input {
+            flex: 1 1 20em;
+            margin: 0;
+            border-radius: 0px;
+        }
+        .label {
+            width: 38px;
+            height: 38px;
+            background: #222222;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            label {
+                text-align: center;
+            }
+        }
+    }
+    textarea{
+        width: 100%;
+        height: 110px;
+    }
+}
 @keyframes move-and-spin {
     from {
         bottom: -10%;
@@ -156,5 +284,14 @@ section{
     }
     to {
         width: 108%;
+    }
+}
+
+@media screen and (max-width: 545px) {
+    .row {
+        margin: 0px;
+    }
+    .work-cards {
+        margin: 10px 0px;
     }
 }
