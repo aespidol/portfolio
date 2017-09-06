@@ -17,6 +17,7 @@
   ],
   "dependencies": {
     "skeleton": "^2.0.4",
-    "animate.css": "^3.5.2"
+    "animate.css": "^3.5.2",
+    "wow": "wowjs#^1.1.2"
   }
 }

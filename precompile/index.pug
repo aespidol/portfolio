@@ -1,21 +1,35 @@
 html
 	head
 	title Andrew Espidol
-		meta(name='viewport', content='width=device-width, initial-scale=1')
-		link(rel='stylesheet', href='./main.css')
-		script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
-		script(src='./main.js')
+	meta(name='viewport', content='width=device-width, initial-scale=1')
+	link(rel='stylesheet', href='./client/css/main.min.css')
+	link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+	link(rel='stylesheet', href='./bower_components/skeleton/css/normalize.css')
+	link(rel='stylesheet', href='./bower_components/skeleton/css/skeleton.css')
+	link(rel='stylesheet', href='./bower_components/animate.css/animate.min.css')
+	script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+	script(src='./bower_components/wow/dist/wow.min.js')
+	script(src='./client/main.js')
 	body
-		.js-spiral
-			.js-section
-				.message
-					| Scroll, Use Arrow Keys or Click
+		//- mixins
+		include ./mixins/shapes
+		nav#nav
+			.nav-logo
+				img.img-responsive(src="./images/logo.png")
+		section#intro
+			.card.float
+				#content
+					h2 Andrew Espidol
+					p Front End Developer
+					#para
+						#highlight
+						#about
+							p.white-text An passionate developer who enjoys creating unique interactions. 
 
-			.js-section
-				h1 hey you
-			.js-section
-			.js-section
-			.js-section
-			.js-section
-			.js-section
-			.js-section
+			each val in [3,20,32,70,89]
+				+circle(val)
+			each val in [10, 37, 80]
+				+triangle(val)
+			each val in [-2, 15, 50, 92]
+				+square(val)
+		//- section#toolbox

@@ -58,8 +58,8 @@ gulp.task('browser-sync', function(){
 // Watch Task
 ////////////////////////////////////////////////
 gulp.task("watch", function(){
-	gulp.watch('./precompile/scss/**/*.scss', ["scss"])
-	gulp.watch('./precompile/*.pug', ["pug"])
+	gulp.watch('./precompile/scss/*.scss', ["scss"])
+	gulp.watch('./precompile/**/*.pug', ["pug"])
 	gulp.watch('./*.html', ["html"]);
 
 })
