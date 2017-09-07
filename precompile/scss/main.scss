@@ -46,8 +46,6 @@ section{
 }
 
 #intro {
-    // min-height: 500px;
-    // height: 100%;
     min-height: 500px;
     background: $turq;
     overflow: hidden;
@@ -91,7 +89,7 @@ section{
 
 #contact {
     padding: 20px;
-    background: url('/images/brick.jpg') no-repeat center center fixed;  
+    background: url('https://s3-us-west-2.amazonaws.com/ampersandrue/portfolio-images/brick.jpg') no-repeat center center fixed;  
     background-size: cover;    
     #contactCard {
         padding: 80px 0px;
@@ -220,24 +218,24 @@ section{
     transform: scale(1.1);
 }
 .flipt {
-    background: url('/images/retired_couple.jpg');
+    background: url('https://s3-us-west-2.amazonaws.com/ampersandrue/portfolio-images/retired_couple.jpg');
     background-position: -40 -6;
 }
 .dojo {
-    background: url('/images/binary.jpg');
+    background: url('https://s3-us-west-2.amazonaws.com/ampersandrue/portfolio-images/binary.jpg');
     background-size: cover;
 }
 .battle {
-    background: url('/images/github.png');
+    background: url('https://s3-us-west-2.amazonaws.com/ampersandrue/portfolio-images/github.png');
     background-size: cover;
 }
 .radio {
-    background: url('/images/radio.png');
+    background: url('https://s3-us-west-2.amazonaws.com/ampersandrue/portfolio-images/radio.png');
     background-size: cover;
 }
 
 .cosmos {
-    background: url('/images/cosmos.jpg');
+    background: url('https://s3-us-west-2.amazonaws.com/ampersandrue/portfolio-images/cosmos.jpg');
     background-size: cover;
 }
 
