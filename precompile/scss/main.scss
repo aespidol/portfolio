@@ -85,6 +85,10 @@ section{
     stroke-width: 5px;
 }
 
+#work {
+    position: relative;
+}
+
 #contact {
     padding: 20px;
     background: url('/images/brick.jpg') no-repeat center center fixed;  
@@ -157,6 +161,19 @@ section{
 
 .black-bg {
     background: #222222 !important;
+}
+
+.detail-container {
+    position: absolute;
+    background: #222222;
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding: 40px;
+}
+
+.relative {
+    position: relative;
 }
 
 .colored-text {

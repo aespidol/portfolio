@@ -99,22 +99,22 @@ html
 									a(href="https://twitter.com/ampersandrue")
 										i.fa.fa-2x.fa-twitter-square
 						.columns.six
-							form
+							form(action="https://formspree.io/aespidol@gmail.com" method="POST")
 								.input
 									.label
 										label
 											i.fa.fa-user
-									input(type="text" placeholder="Your Name")
+									input(type="text" placeholder="Your Name" name="name")
 								.input
 									.label
 										label
 											i.fa.fa-phone
-									input(type="tel" placeholder="###-###-####")
+									input(type="tel" placeholder="###-###-####" name="phone")
 								.input
 									.label
 										label
 											i.fa.fa-envelope
-									input(type="email" placeholder="example@email.com")
+									input(type="email" placeholder="example@email.com" name="_replyto")
 								textarea(name="", cols="30", rows="10" placeholder="Your message...")
-								input.white-text.black-bg(type="submit" value="Submit")
+								input.white-text.black-bg(type="submit" value="Send")
 
