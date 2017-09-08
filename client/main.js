@@ -14,10 +14,12 @@ document.addEventListener('wheel', function(el){
     if(!about){
         about = document.getElementById("about");
     }
-    console.log(scroller.className)
+    let hideIdx = scroller.className.indexOf("hide");
     if(el.deltaY > 0){
         highlight.style = "width: 108%;"
-        scroller.className+=" hide";
+        if(hideIdx === -1){
+            scroller.className+=" hide";
+        }
     } else if(el.deltaY < 0){
         highlight.style = "width: 0%;"
         scroller.className = scroller.className.replace(" hide", "");
