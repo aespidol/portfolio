@@ -5,7 +5,6 @@ window.onbeforeunload = function(){
 new WOW().init();
 
 var fill = false;
-const section = ["intro", "about"]
 var about;
 var oldHTML;
 document.addEventListener('wheel', function(el){
