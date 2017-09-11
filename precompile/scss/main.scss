@@ -15,9 +15,11 @@ $wisteria: rgba(142, 68, 173,1.0);
 $clouds: rgba(236, 240, 241,1.0);
 $alizarin: rgba(231, 76, 60,1.0);
 
-body {
+html, body {
     background: $white;
+    max-width: 100%;
     margin: 0px;
+    overflow-x: hidden;
 }
 
 nav {
