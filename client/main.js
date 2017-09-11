@@ -7,7 +7,6 @@ new WOW().init();
 var fill = false;
 var about;
 var oldHTML;
-var animate = true;
 
 function handleScroll(el){
     alert("hey")
@@ -42,8 +41,7 @@ document.addEventListener('touchmove', function(el){
     var scroller = document.getElementById("scroller");
     var description = document.getElementById("description");
     var hideIdx = scroller.className.indexOf("hide");
-    if(top > 1 && animate){
-        animate = false;        
+    if(top > 1){
         card.children[0].className = "pull"
         setTimeout(function(){
             card.style = "width: 100%;"            
@@ -53,12 +51,11 @@ document.addEventListener('touchmove', function(el){
         if(hideIdx === -1){
             scroller.className+=" hide";
         }
-    } else if(top < 1 && !animate){
+    } else if(top < 1){
         card.style = "width: 50%;"
         card.children[0].className = ""        
         scroller.className = scroller.className.replace(" hide", "");
         description.style = "opacity: 0;"       
-        animate = true; 
     }
 })
 
