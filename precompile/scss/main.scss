@@ -358,6 +358,9 @@ form {
 }
 
 @media screen and (max-width: 545px) {
+    section {
+        margin: 0px;
+    }
     .row {
         margin: 0px;
     }
