@@ -53,7 +53,7 @@ document.addEventListener('touchmove', function(el){
         if(hideIdx === -1){
             scroller.className+=" hide";
         }
-    } else if(top < 5 && !animate){
+    } else if(top < 2 && !animate){
         card.style = "width: 50%;"
         card.children[0].className = ""        
         scroller.className = scroller.className.replace(" hide", "");
