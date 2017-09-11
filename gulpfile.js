@@ -10,9 +10,10 @@ var gulp = require("gulp"),
 	sass = require('gulp-sass'),
 	plumber = require('gulp-plumber'),
 	rename = require('gulp-rename'),
-	autoprefixer = require('gulp-autoprefixer'),
+	autoprefixer = require('autoprefixer-core'),
 	nodemon = require('gulp-nodemon'),
-	pug = require('gulp-pug');
+	pug = require('gulp-pug'),
+	postcss = require('gulp-postcss');
 
 ////////////////////////////////////////////////
 // Scripts Task
@@ -23,7 +24,7 @@ gulp.task("scss", function(){
 		.pipe(sass().on('error', sass.logError))
 		.pipe(rename({suffix: '.min'}))
 		.pipe(uglifycss())
-		.pipe(autoprefixer('last 2 versions'))
+		.pipe(postcss([ autoprefixer({browsers: ["> 0%"]})]))
 		.pipe(gulp.dest('./client/css'))
 		.pipe(reload({stream:true}));
 });
