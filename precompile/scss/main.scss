@@ -17,6 +17,7 @@ $alizarin: rgba(231, 76, 60,1.0);
 
 body {
     background: $white;
+    margin: 0px;
 }
 
 nav {
@@ -46,8 +47,8 @@ section{
 }
 
 #intro {
-    min-height: 500px;
-    background: $turq;
+    height: 85vh;
+    background: $clouds;
     overflow: hidden;
     position: relative;
     text-align: center;
@@ -68,13 +69,15 @@ section{
         position: absolute;
         bottom: 0px;
     }
-    svg {
+
+    #description {
         position: absolute;
-        .triangle {
-            fill:none;
-            stroke: $greensea; 
-            stroke-width: 5px;
-        }
+        left: 13%;
+        top: 40%;
+        text-align: left;
+        width: 35%;
+        opacity: 0;
+        transition: opacity ease 3s;
     }
 
 }
@@ -100,29 +103,35 @@ section{
     }
 }
 
-.card {
-    background: $white;
-    display: inline-block;
-    padding: 15px 45px;
+#card {
+    background: $alizarin;
     position: absolute;
-    bottom: 34%;
-    right: 50%;
-    z-index: 1;
-    transform: translateX(50%) scale(1.2);
-    border-radius: 2px;
-    #para {
-        margin: 5px auto;
-        z-index: 2;
-        position: relative;
-        width: 80%;
+    left: 0px;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: width 1s ease;
+    h1 {
+        text-align: left;
+        font-weight: bold;
+        font-size: 7.0em;
+        transform: translateX(50%);
+        transition: transform 1s ease;
     }
-    #content {
-        position: relative;
-        h2, p {
-            position: relative;
-            z-index: 2;
-        }
-    }
+}
+
+.fill {
+    width: 100%;
+}
+
+.pull {
+    animation: pulling 0.5s;
+}
+
+.red-text {
+    color: $alizarin;
 }
 
 .squiggle {
@@ -198,8 +207,8 @@ section{
     transform: rotate(-90deg) translateX(10px);
     transition: color 0.5s;
     position: absolute;
-    bottom: 8%;
-    left: 50%;
+    bottom: 12%;
+    right: 5%;
     i {
         margin-right: 4px;
         animation: shake 6s infinite;
@@ -238,6 +247,7 @@ section{
 
 
 .work-cards {
+    min-height: 115px;
     padding: 20px;
     background: $alizarin;
     color: white;
@@ -333,6 +343,18 @@ form {
     }
 }
 
+@keyframes pulling {
+    0% {
+        transform: translateX(50%);
+    }
+    50% {
+        transform: translateX(60%);
+    }
+    100% {
+        transform: translateX(50%);
+    }
+}
+
 @media screen and (max-width: 545px) {
     .row {
         margin: 0px;
@@ -346,3 +368,7 @@ form {
         }
     }
 }
+
+
+
+

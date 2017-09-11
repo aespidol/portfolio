@@ -9,20 +9,28 @@ const section = ["intro", "about"]
 let about;
 let oldHTML;
 document.addEventListener('wheel', function(el){
-    let highlight = document.getElementById("highlight");
+    let card = document.getElementById("card");
     let scroller = document.getElementById("scroller");
+    let description = document.getElementById("description");
     if(!about){
         about = document.getElementById("about");
     }
     let hideIdx = scroller.className.indexOf("hide");
     if(el.deltaY > 0){
-        highlight.style = "width: 108%;"
+        card.children[0].className = "pull"
+        setTimeout(function(){
+            card.style = "width: 100%;"            
+            description.style = "opacity: 1.0;"
+        }, 110)
+
         if(hideIdx === -1){
             scroller.className+=" hide";
         }
     } else if(el.deltaY < 0){
-        highlight.style = "width: 0%;"
+        card.style = "width: 50%;"
+        card.children[0].className = ""        
         scroller.className = scroller.className.replace(" hide", "");
+        description.style = "opacity: 0;"        
     }
 })
 
