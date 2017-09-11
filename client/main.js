@@ -9,7 +9,6 @@ var about;
 var oldHTML;
 
 function handleScroll(el){
-    alert("hey")
     var card = document.getElementById("card");
     var scroller = document.getElementById("scroller");
     var description = document.getElementById("description");
