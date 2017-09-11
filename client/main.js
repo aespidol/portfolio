@@ -4,18 +4,18 @@ window.onbeforeunload = function(){
 
 new WOW().init();
 
-let fill = false;
+var fill = false;
 const section = ["intro", "about"]
-let about;
-let oldHTML;
+var about;
+var oldHTML;
 document.addEventListener('wheel', function(el){
-    let card = document.getElementById("card");
-    let scroller = document.getElementById("scroller");
-    let description = document.getElementById("description");
+    var card = document.getElementById("card");
+    var scroller = document.getElementById("scroller");
+    var description = document.getElementById("description");
     if(!about){
         about = document.getElementById("about");
     }
-    let hideIdx = scroller.className.indexOf("hide");
+    var hideIdx = scroller.className.indexOf("hide");
     if(el.deltaY > 0){
         card.children[0].className = "pull"
         setTimeout(function(){
